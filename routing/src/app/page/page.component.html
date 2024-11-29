@@ -1,0 +1,7 @@
+<h2>
+  <span>Page {{ pageNumber() }}: {{ data().pageName }}</span>
+</h2>
+
+@if (!!limit()) {
+  <div class="main">Limit: {{ limit() }}</div>
+}

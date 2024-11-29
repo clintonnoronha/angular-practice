@@ -1,0 +1,15 @@
+@if (goToProfileBtnText === constants.GO_TO_PROFILE) {
+  <h2>Settings</h2>
+}
+
+<div>
+  <button class="goToProfileBtn" (click)="goToProfilePage()">
+    {{ goToProfileBtnText }}
+  </button>
+</div>
+
+<div class="main">
+  @if (goToProfileBtnText === constants.GO_BACK) {
+    <app-profile></app-profile>
+  }
+</div>

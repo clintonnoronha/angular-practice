@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="headline">{{ title }}</div>
+
+  <div class="links">
+    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+    <a routerLink="/products" routerLinkActive="active">Products</a>
+    <!--
+      Here /setting and /setting/profile share partial path matches.
+      By default, routerLinkActive uses partial match hence both links
+      Settings & Profile are marked active if we go Profile link.
+      [routerLinkActiveOptions]="{ exact: true }" is to let /settings
+      match to the exact path and not partial path.
+    -->
+    <a
+      routerLink="/settings"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Settings</a
+    >
+    <a routerLink="/pages/1" routerLinkActive="active">Pages</a>
+    <a routerLink="/settings/profile" routerLinkActive="active">Profile</a>
+  </div>
+
+  <div class="main">
+    <router-outlet />
+  </div>
+</div>

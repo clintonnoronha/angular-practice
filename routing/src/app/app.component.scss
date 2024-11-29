@@ -1,0 +1,55 @@
+@use "../../public/scss/variables" as *;
+/*
+  'or'
+  @use "../../public/scss/variables" as vars;
+*/
+
+.container {
+  width: 500px;
+  margin: 50px auto 0;
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.headline {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  color: #b83f45;
+}
+
+.links {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 20px;
+}
+
+a {
+  padding: 5px;
+  color: #111;
+  margin-right: 10px;
+  font-size: 18px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $route-hover-color;
+    /*
+      background-color: vars.$route-hover-color;
+    */
+  }
+}
+
+.active {
+  background-color: $route-hover-color;
+  /*
+    background-color: vars.$route-hover-color;
+  */
+}
+
+.main {
+  text-align: center;
+}
